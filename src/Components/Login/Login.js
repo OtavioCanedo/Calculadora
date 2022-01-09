@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-// import { Redirect } from 'react-router-dom';
-import Calculator from '../Calculator/Calculator';
 
-import './Button.css';
 import Button from './Button';
 import './Login.css';
+import { Navigate, Link } from 'react-router-dom';
 
 const Login = () => {
   const [inputDataUser, setInputDataUser] = useState('');
@@ -24,8 +22,10 @@ const Login = () => {
   
   function VerifyUser() {
     if (handleInputUser === user.username && handleInputPassword === user.password){
-      // return <Redirect to="/Home" />
-      return <a href="#Home"></a>
+      return (
+        // <Navigate to="/Home" />
+        <Link to="/Home" />
+      )
     }  
     return {error: 'Usuário ou senha inválidos'};
   }

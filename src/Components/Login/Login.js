@@ -12,6 +12,11 @@ const Login = () => {
   const [inputDataPassword, setInputDataPassword] = useState('');
   const navigate = useNavigate();
 
+  const user = {
+    username: "admin",
+    password: "admin",
+  }
+
   const handleInputUser = (e) => {
     setInputDataUser(e.target.value);
   }
@@ -20,8 +25,10 @@ const Login = () => {
   }
 
   function VerifyUser() {
-    return navigate('/home') 
-    // return {error: 'Usuário ou senha inválidos'};
+    //if (setInputDataUser == "admin" && setInputDataPassword == "admin"){
+      return navigate('/home') 
+    //}  
+    //return {error: 'Usuário ou senha inválidos'};
   }
 
   return ( 

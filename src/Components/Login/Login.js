@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 
-import Button from './Button';
 import './Login.css';
-import { Navigate, Link } from 'react-router-dom';
+import Button from './Button';
+
+import { useNavigate, Route, Routes } from 'react-router-dom';
+
+import Calculator from '../Calculator/Calculator';
 
 const Login = () => {
   const [inputDataUser, setInputDataUser] = useState('');
   const [inputDataPassword, setInputDataPassword] = useState('');
-  
-  const user = {
-    username: "admin",
-    password: "admin"
-  }
+  const navigate = useNavigate();
 
   const handleInputUser = (e) => {
     setInputDataUser(e.target.value);
@@ -19,15 +18,10 @@ const Login = () => {
   const handleInputPassword = (e) => {
     setInputDataPassword(e.target.value);
   }
-  
+
   function VerifyUser() {
-    if (handleInputUser === user.username && handleInputPassword === user.password){
-      return (
-        // <Navigate to="/Home" />
-        <Link to="/Home" />
-      )
-    }  
-    return {error: 'Usuário ou senha inválidos'};
+    return navigate('/home') 
+    // return {error: 'Usuário ou senha inválidos'};
   }
 
   return ( 

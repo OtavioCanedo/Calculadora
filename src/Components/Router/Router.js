@@ -7,7 +7,7 @@ import Calculator from '../Calculator/Calculator';
 const Router = () => (
   <Routes>
     <Route path="/" exact element={<Login />} />
-    <Route path="/Home" element={<Calculator />} />
+    <Route path="/home" element={<Calculator />} />
   </Routes>
 )
 

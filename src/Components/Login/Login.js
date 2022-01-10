@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 import './Login.css';
 import Button from './Button';
 
-import { useNavigate, Route, Routes } from 'react-router-dom';
-
-import Calculator from '../Calculator/Calculator';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [inputDataUser, setInputDataUser] = useState('');
@@ -25,10 +23,10 @@ const Login = () => {
   }
 
   function VerifyUser() {
-    //if (setInputDataUser == "admin" && setInputDataPassword == "admin"){
-      return navigate('/home') 
+    //if (handleInputUser === user.username && handleInputPassword === user.password){
+      navigate('/home'); 
     //}  
-    //return {error: 'Usuário ou senha inválidos'};
+    return {error: 'Usuário ou senha inválidos'};
   }
 
   return ( 

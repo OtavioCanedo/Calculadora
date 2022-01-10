@@ -12,6 +12,14 @@
     background-color: black;
 }
 
+.num {
+  color: white;
+  display: flex;
+  justify-content: right;
+  margin-right: 25px;
+  font-size: 55px;
+}
+
 .button_num,
 .button_op,
 .button_clear {
@@ -25,6 +33,16 @@
     border: #363636;
 }
 
+.button_hidden {
+  width: 90px;
+  height: 90px;
+  font-size: 27px;
+  background-color: black;
+  border: black;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
 .button_num {
   color: white;
 }
@@ -35,9 +53,4 @@
 
 .button_clear {
   color: rgb(255, 107, 53);
-}
-
-.buttons {
-    margin-top: 110px;
-    margin-left: 1px;
 }
